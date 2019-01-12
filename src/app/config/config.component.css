@@ -1,0 +1,23 @@
+.image-container{
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid grey;
+  border-radius: 8px 8px 8px 8px;
+  width: 300px;
+  box-shadow: 2px 3px 9px 2px #888888;
+
+}
+.star-icon{
+  width:20px;
+  position:relative;
+  bottom:150px;
+  left: 95%;
+}
+.image-div{
+
+}
+.people-name{
+  position: relative;
+  left: 70%;
+  bottom: 65px;
+}

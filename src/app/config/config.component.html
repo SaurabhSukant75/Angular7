@@ -1,0 +1,31 @@
+<div class="container">
+
+<div class="input-group mb-3">
+
+  <input type="text" [(ngModel)]="PeopleFilter.first_name" class="form-control" placeholder="Search Name" aria-label="" aria-describedby="basic-addon1">
+  <div class="input-group-prepend">
+  <span class="input-group-text">Search Name</span>
+  </div>
+</div>
+
+</div>
+<div *ngIf = "peoples">
+  <div class="container">
+  <div class="row  justify-content-center">
+    <div *ngFor = "let people of peoples | filterBy:PeopleFilter; let i=index" class="image-container">
+  <div class="col" >
+  <img src={{people.avatar}} alt="">
+  <div class="people-name">
+    {{people.first_name}}
+  </div>
+  <div class="star-icon">
+    <span (click)="getId(people.id)" style="color:blue;" class="far fa-star"></span>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <ul style="list-style-type: none;">
+  <li class=""*ngIf="(peoples| filterBy: PeopleFilter).length === 0">No matching elements</li>
+  </ul>
+</div>
